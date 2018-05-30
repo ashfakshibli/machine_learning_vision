@@ -43,4 +43,5 @@ regressor = lm(formula = Salary ~ YearsExperience,
 # F-statistic: 494.8 on 1 and 18 DF,  p-value: 1.524e-14 (lower the p value indepent variable is more significant. less than 5% is a threshold)
 
 
-
+# Predicting the Test set results
+y_pred = predict(regressor, newdata = test_set)
