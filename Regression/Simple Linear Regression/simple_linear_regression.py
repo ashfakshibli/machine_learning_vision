@@ -36,7 +36,7 @@ y_train = sc_y.fit_transform(y_train) """
 #Fitting Simple Linear regression to the Training Set
 from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
-regressor.fit(X_train, y_train)
+regressor.fit(X_train, y_train) # The machine that learned from training data and found a linear regression model.
 
 #predicting the Test set results
 y_pred = regressor.predict(X_test)
@@ -45,6 +45,14 @@ y_pred = regressor.predict(X_test)
 plt.scatter(X_train, y_train, color='red')
 plt.plot(X_train, regressor.predict(X_train), color='blue')
 plt.title('Salary vs Experience (Training set)')
+plt.xlabel('Years of experience')
+plt.ylabel('Salary')
+plt.show()
+
+# Visualizing the test set results
+plt.scatter(X_test, y_test, color='red')
+plt.plot(X_train, regressor.predict(X_train), color='blue') # We didn't change because the line not gonna change as it's our model driven line. 
+plt.title('Salary vs Experience (Test set)')
 plt.xlabel('Years of experience')
 plt.ylabel('Salary')
 plt.show()
