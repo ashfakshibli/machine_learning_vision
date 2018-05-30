@@ -19,3 +19,18 @@ from sklearn.preprocessing import Imputer  # Imputer class used to take care of 
 imputer = Imputer(missing_values = 'NaN', strategy='mean', axis=0) # If axis=0, then impute along columns.
 imputer.fit(X[:, 1:3]) # X[rows, column]. column = 1:3 column 1 to 2 (upper bound excluded) 
 X[:, 1:3] = imputer.transform(X[:, 1:3])
+
+
+# Encoding Categorical data
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+
+labelencoder_X = LabelEncoder()
+X[:, 0] = labelencoder_X.fit_transform(X[:, 0]) # Encoding first column
+
+onehotencoder = OneHotEncoder(categorical_features = [0]) # ctrl + i for inspect class
+X = onehotencoder.fit_transform(X).toarray() # Encode dummy variables
+
+
+#for dependent variable OneHot not needed. Beacause model will know it's categorical not weight
+labelencoder_y = LabelEncoder()
+y = labelencoder_y.fit_transform(y)
