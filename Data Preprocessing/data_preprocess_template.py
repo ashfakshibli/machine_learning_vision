@@ -34,3 +34,9 @@ X = onehotencoder.fit_transform(X).toarray() # Encode dummy variables
 #for dependent variable OneHot not needed. Beacause model will know it's categorical not weight
 labelencoder_y = LabelEncoder()
 y = labelencoder_y.fit_transform(y)
+
+
+#splitting dataset into training and test data set
+from sklearn.cross_validation import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
