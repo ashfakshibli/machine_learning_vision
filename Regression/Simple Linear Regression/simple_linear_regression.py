@@ -39,3 +39,17 @@ regressor = LinearRegression()
 regressor.fit(X_train, y_train)
 
 #predicting the Test set results
+y_pred = regressor.predict(X_test)
+
+# Visualizing the training set results
+plt.scatter(X_train, y_train, color='red')
+plt.plot(X_train, regressor.predict(X_train), color='blue')
+plt.title('Salary vs Experience (Training set)')
+plt.xlabel('Years of experience')
+plt.ylabel('Salary')
+plt.show()
+
+
+
+
+
