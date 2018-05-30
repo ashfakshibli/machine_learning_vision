@@ -50,6 +50,8 @@ from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train) # first fitted with X_train then same transformation for X_test
 X_test = sc_X.transform(X_test)
+sc_y = StandardScaler()
+y_train = sc_y.fit_transform(y_train) 
 
 # do we need to apply on dependent variable?
 #It's a classification problem (categorical variable). For regression dependent variable will need scaling as huge.

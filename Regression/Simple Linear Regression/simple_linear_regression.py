@@ -1,4 +1,11 @@
-#Data Preprocessing Template
+# -*- coding: utf-8 -*-
+"""
+Created on Thu May 31 04:25:57 2018
+
+@author: Ashfak Md. Shibli
+"""
+
+#Simple Linear Regression
 
 #Importing libraries
 import numpy as np
@@ -7,15 +14,15 @@ import pandas as pd
 
 
 #Importing the dataset
-dataset = pd.read_csv('Data.csv')
+dataset = pd.read_csv('Salary_Data.csv')
 X = dataset.iloc[:,:-1].values 
-y = dataset.iloc[:,3].values 
+y = dataset.iloc[:,1].values 
 
 
 #splitting dataset into training and test data set
 from sklearn.cross_validation import train_test_split
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 1/3, random_state = 0)
 
 
 #feature scaling
