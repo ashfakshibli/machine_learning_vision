@@ -49,5 +49,6 @@ regressor = lm(formula = Profit ~ R.D.Spend,
                data = dataset)
 summary(regressor)
 
+y_pred = predict(regressor, newdata = test_set)
 
 
