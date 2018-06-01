@@ -57,7 +57,7 @@ y_pred = regressor.predict(X_test)
 # Building the optimal model using Backward Elimination
 import statsmodels.formula.api as sm
 X = np.append(arr = np.ones((50, 1)).astype(int), values = X, axis = 1) # Added column of ones in front of X
-X_opt = X[:, [0, 1, 2, 3, 4, 5]] # Written all columns explicitly becuase we will remove one by one
+X_opt = X[:, [0, 3]] # Written all columns explicitly becuase we will remove one by one
 regressor_OLS = sm.OLS(endog = y, exog = X_opt).fit() # Ordinary Least Squares. Step 2 (fit)
 regressor_OLS.summary() # Check step 3
 
