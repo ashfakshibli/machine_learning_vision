@@ -22,3 +22,12 @@ test_set = subset(dataset, split== FALSE)
 # Feature scaling
 # training_set[,2:3] = scale(training_set[,2:3])
 # test_set[,2:3] = scale(test_set[,2:3])
+
+# Fit Multiple linear Regression to the Training set
+
+# regressor = lm(formula = Profit ~ R.D.Spend + Adminstration + Marketing.Spend + State)
+regressor = lm(formula = Profit ~ .,
+               data = training_set)
+
+# Predicting the Test Set results
+y_pred = predict(regressor, newdata = test_set)
