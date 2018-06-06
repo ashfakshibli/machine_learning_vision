@@ -63,7 +63,8 @@ y_pred = predict(lin_reg, data.frame(Level = 6.5))
 y_pred = predict(poly_reg, data.frame(Level = 6.5, 
                                       Level2 = 6.5^2,
                                       Level3 = 6.5^3,
-                                      Level4 = 6.5^4))
+                                      Level4 = 6.5^4
+                                      ))
 
 
 
