@@ -38,6 +38,8 @@ ggplot() +
              color = 'red') +
   geom_line(aes(x = x_grid, y = predict(regressor, newdata = data.frame(Level = x_grid))),
             color = 'blue') +
+  # geom_line(aes(x = dataset$Level, y = predict(regressor, newdata = dataset)),
+  #           color = 'blue') +
   ggtitle('Truth or Bluff (Regression Model)') +
   xlab('Level') +
   ylab('Salary')
