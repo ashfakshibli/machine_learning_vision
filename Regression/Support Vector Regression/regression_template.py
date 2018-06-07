@@ -49,7 +49,7 @@ plt.ylabel('Salary')
 plt.show()
 
 # Visualizing the Regression results in higher resolution and smother curve
-X_grid = np.arange(min(X), max(X), 0.1 )
+X_grid = np.arrange(min(X), max(X), 0.1 )
 X_grid = X_grid.reshape((len(X_grid)), 1)
 plt.scatter(X, y, color = 'red')
 plt.plot(X_grid, regressor.predict(X_grid), color = 'blue')
