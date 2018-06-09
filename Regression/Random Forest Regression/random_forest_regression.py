@@ -30,7 +30,7 @@ y_train = sc_y.fit_transform(y_train) """
 # Fitting Random Forest Regression to the dataset
 # Create a regressor
 from sklearn.ensemble import RandomForestRegressor
-regressor = RandomForestRegressor(n_estimators = 100, random_state = 0)
+regressor = RandomForestRegressor(n_estimators = 300, random_state = 0)
 regressor.fit(X, y)
 
 # Predicting a new result with Random Forest Regression
