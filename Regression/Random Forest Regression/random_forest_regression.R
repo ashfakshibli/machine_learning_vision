@@ -1,4 +1,4 @@
-# Regression Template
+# Random Forest Regression
 
 #import dataset
 
@@ -18,21 +18,26 @@ dataset = dataset[,2:3]
 # test_set[,2:3] = scale(test_set[,2:3])
 
 
-# Fitting  Regression to the dataset
+# Fitting Random Forest Regression to the dataset
 #Create your own regressor
-
+#install.packages('randomForest')
+library(randomForest)
+set.seed(1234)
+regressor = randomForest(x = dataset[1],
+                         y = dataset$Salary,
+                         ntree = 100)
 
 
 # Predicting a new result 
 y_pred = predict(regressor, data.frame(Level = 6.5))
 
 
-# Visualizing the Regression Model results
+# Visualizing the Random Forest Regression results
 # install.packages('ggplot2')
 library(ggplot2)
 
-x_grid = seq(min(dataset$Level), max(dataset$Level), 0.1)
-  
+x_grid = seq(min(dataset$Level), max(dataset$Level), 0.01)
+
 ggplot() +
   geom_point(aes(x = dataset$Level, y = dataset$Salary),
              color = 'red') +
@@ -40,7 +45,7 @@ ggplot() +
             color = 'blue') +
   # geom_line(aes(x = dataset$Level, y = predict(regressor, newdata = dataset)),
   #           color = 'blue') +
-  ggtitle('Truth or Bluff (Regression Model)') +
+  ggtitle('Truth or Bluff (Random Forest Regression)') +
   xlab('Level') +
   ylab('Salary')
 
