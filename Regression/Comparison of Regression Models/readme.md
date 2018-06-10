@@ -29,4 +29,6 @@ Adj R^2 increased then model fit more efficiently.
 
 If positive co-related to dependent variable (Profit).
 
-Don't give conclusion with magnitude of Co-effiecients. Can say with per unit(same unit)
+Don't give conclusion with magnitude of Co-effiecients. Can say with per unit(same unit).
+
+Every dollar increase in R&D it will 79 cent increase in profit.
