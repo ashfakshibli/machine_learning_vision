@@ -32,3 +32,5 @@ If positive co-related to dependent variable (Profit).
 Don't give conclusion with magnitude of Co-effiecients. Can say with per unit(same unit).
 
 Every dollar increase in R&D it will 79 cent increase in profit.
+
+Coeffiencts merely potray additional effects on the model. 
